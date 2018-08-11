@@ -10,7 +10,7 @@ import UIKit
 
 class DetailVC: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class DetailVC: UIViewController {
     }
     func setAnimation() {
         imageView.motionIdentifier = "foo"
-        textView.motionIdentifier = "bar"
+        textLabel.motionIdentifier = "bar"
 
     }
 

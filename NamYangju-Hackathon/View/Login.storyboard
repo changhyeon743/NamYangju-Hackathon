@@ -88,15 +88,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrd-lu-m05">
-                                <rect key="frame" x="42" y="206" width="290" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Q9d-Va-TR5">
+                                <rect key="frame" x="15" y="146.5" width="345" height="174"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBn-3Y-aCT">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrd-lu-m05">
+                                        <rect key="frame" x="0.0" y="36" width="345" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xq3-8t-Nzo">
+                                        <rect key="frame" x="0.0" y="72" width="345" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9BJ-O3-VQc">
+                                        <rect key="frame" x="0.0" y="108" width="345" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qn8-pk-52M">
+                                        <rect key="frame" x="0.0" y="144" width="345" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9Q-c8-naM">
+                                <rect key="frame" x="290" y="594" width="69" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Iyr-sl-XUN"/>
+                                    <constraint firstAttribute="width" constant="69" id="ed1-7p-ypR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <state key="normal" title="확인"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPu-9W-0dn">
+                                <rect key="frame" x="7" y="27" width="69" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="NZ3-qg-fde"/>
+                                    <constraint firstAttribute="width" constant="69" id="Xkk-Fq-nhd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <state key="normal" title="취소"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="m5L-iA-aZV" eventType="touchUpInside" id="MmG-xW-FzY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qPu-9W-0dn" firstAttribute="top" secondItem="KtX-wW-7TX" secondAttribute="top" constant="7" id="0CL-l7-pjJ"/>
+                            <constraint firstItem="qPu-9W-0dn" firstAttribute="leading" secondItem="KtX-wW-7TX" secondAttribute="leading" constant="7" id="1fB-po-bZm"/>
+                            <constraint firstItem="KtX-wW-7TX" firstAttribute="trailing" secondItem="d9Q-c8-naM" secondAttribute="trailing" constant="16" id="UPg-Y6-dJt"/>
+                            <constraint firstItem="Q9d-Va-TR5" firstAttribute="centerY" secondItem="HQW-lY-S1Q" secondAttribute="centerY" constant="-100" id="ZjG-8r-8QV"/>
+                            <constraint firstItem="KtX-wW-7TX" firstAttribute="bottom" secondItem="d9Q-c8-naM" secondAttribute="bottom" constant="20" id="jxT-YN-Jkb"/>
+                            <constraint firstItem="Q9d-Va-TR5" firstAttribute="leading" secondItem="KtX-wW-7TX" secondAttribute="leading" constant="15" id="p6j-0a-dyV"/>
+                            <constraint firstItem="KtX-wW-7TX" firstAttribute="trailing" secondItem="Q9d-Va-TR5" secondAttribute="trailing" constant="15" id="vZp-HP-cyy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KtX-wW-7TX"/>
                     </view>
                 </viewController>
@@ -105,5 +163,4 @@
             <point key="canvasLocation" x="2084" y="-143.47826086956522"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.2156862745" green="0.28235294119999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

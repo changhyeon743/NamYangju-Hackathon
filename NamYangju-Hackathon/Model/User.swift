@@ -1,5 +1,5 @@
 //
-//  API.swift
+//  User.swift
 //  NamYangju-Hackathon
 //
 //  Created by 이창현 on 2018. 8. 11..
@@ -7,15 +7,3 @@
 //
 
 import Foundation
-import Alamofire
-
-class API {
-    static func send() {
-        Ala
-    }
-}
-
-
-
-
-

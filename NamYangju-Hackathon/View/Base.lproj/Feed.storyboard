@@ -38,12 +38,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="iOc-OX-GFE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="OJ3-Ua-meR" id="SjN-eh-goo"/>
                         <segue destination="gZx-Ld-3Ao" kind="show" identifier="show_detail" id="8Dp-zU-5DF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarItem systemItem="more" id="WVF-Rb-wp2"/>
             </objects>
             <point key="canvasLocation" x="212" y="-50"/>
         </scene>
@@ -52,14 +55,14 @@
             <objects>
                 <viewController id="gZx-Ld-3Ao" customClass="DetailVC" customModule="NamYangju_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tev-9X-2DB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-sa-e7D">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XG1-s6-lIA" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1101"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NkB-Bf-vum">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -70,12 +73,9 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="motionIdentifier" value="img"/>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-RQ-Mo6">
-                                                <rect key="frame" x="15" y="320" width="345" height="680"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment>
-                                                        <mutableString key="content">오규석 부산 기장군수가 지난 3월에 이어 다시 원자력안전위원회 앞에서 1인 시위를 했습니다.
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-ZB-QH3">
+                                                <rect key="frame" x="15" y="315" width="345" height="771"/>
+                                                <mutableString key="text">오규석 부산 기장군수가 지난 3월에 이어 다시 원자력안전위원회 앞에서 1인 시위를 했습니다.
 
 기장군 동남권 방사선의과학단지에 들어설 '수출용 신형연구로'의 조속한 건설허가를 촉구하기 위해서입니다.
 
@@ -96,31 +96,20 @@
 애초 예상된 입주기업은 2백여 개나 됐지만, 아직 분양 계약을 맺은 곳은 없습니다.
 
 이를 지켜보는 주민들도 애가 탑니다.</mutableString>
-                                                        <attributes>
-                                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Light"/>
-                                                            <real key="NSKern" value="0.0"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="20" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                <tabStops/>
-                                                            </paragraphStyle>
-                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <real key="NSStrokeWidth" value="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4AP-ZB-QH3" secondAttribute="bottom" constant="15" id="1j8-CV-3DD"/>
                                             <constraint firstItem="NkB-Bf-vum" firstAttribute="top" secondItem="XG1-s6-lIA" secondAttribute="top" id="2S8-vw-6cD"/>
-                                            <constraint firstAttribute="bottom" secondItem="OMQ-RQ-Mo6" secondAttribute="bottom" id="5TK-wD-WBp"/>
+                                            <constraint firstItem="4AP-ZB-QH3" firstAttribute="top" secondItem="NkB-Bf-vum" secondAttribute="bottom" constant="15" id="3u1-p1-Po4"/>
                                             <constraint firstAttribute="trailing" secondItem="NkB-Bf-vum" secondAttribute="trailing" id="9DR-tA-JnV"/>
-                                            <constraint firstItem="OMQ-RQ-Mo6" firstAttribute="top" secondItem="NkB-Bf-vum" secondAttribute="bottom" constant="20" id="KgG-Ej-ZHK"/>
-                                            <constraint firstAttribute="trailing" secondItem="OMQ-RQ-Mo6" secondAttribute="trailing" constant="15" id="c7o-Au-XFR"/>
+                                            <constraint firstAttribute="trailing" secondItem="4AP-ZB-QH3" secondAttribute="trailing" constant="15" id="IxU-kP-lzK"/>
+                                            <constraint firstItem="4AP-ZB-QH3" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" constant="15" id="aN3-rv-UWA"/>
                                             <constraint firstItem="NkB-Bf-vum" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" id="qhG-pO-Obz"/>
-                                            <constraint firstItem="OMQ-RQ-Mo6" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" constant="15" id="sQ1-LL-WB9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -152,21 +141,19 @@
                             <constraint firstItem="EaQ-fe-rxX" firstAttribute="trailing" secondItem="Knv-lQ-VXg" secondAttribute="trailing" constant="16" id="TuE-20-7P4"/>
                             <constraint firstItem="aKO-sa-e7D" firstAttribute="top" secondItem="EaQ-fe-rxX" secondAttribute="top" id="gqT-lG-gE3"/>
                             <constraint firstItem="XG1-s6-lIA" firstAttribute="width" secondItem="tev-9X-2DB" secondAttribute="width" id="oAR-vB-Cfj"/>
-                            <constraint firstItem="XG1-s6-lIA" firstAttribute="height" secondItem="tev-9X-2DB" secondAttribute="height" id="yeQ-2p-elv"/>
                             <constraint firstItem="EaQ-fe-rxX" firstAttribute="bottom" secondItem="aKO-sa-e7D" secondAttribute="bottom" id="ywf-gv-ya0"/>
                             <constraint firstItem="EaQ-fe-rxX" firstAttribute="trailing" secondItem="aKO-sa-e7D" secondAttribute="trailing" id="zHa-AS-tjd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EaQ-fe-rxX"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="imageView" destination="NkB-Bf-vum" id="yrE-Dw-8x0"/>
-                        <outlet property="textView" destination="OMQ-RQ-Mo6" id="Pvy-ka-rKx"/>
+                        <outlet property="textLabel" destination="4AP-ZB-QH3" id="TLi-yR-JR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJq-hk-7fB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="66.566716641679164"/>
+            <point key="canvasLocation" x="1039" y="-51"/>
         </scene>
     </scenes>
     <resources>

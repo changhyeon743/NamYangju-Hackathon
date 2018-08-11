@@ -20,21 +20,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="zhV-B9-CHD" kind="relationship" relationship="viewControllers" id="dwZ-v1-Fsb"/>
+                        <segue destination="bo2-h6-qLR" kind="relationship" relationship="viewControllers" id="XkD-cy-cEs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQB-UU-Kp4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1010" y="-233"/>
+            <point key="canvasLocation" x="-887" y="-351"/>
         </scene>
         <!--Feed-->
         <scene sceneID="VcC-Gh-TNd">
             <objects>
                 <viewControllerPlaceholder storyboardName="Feed" id="zhV-B9-CHD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zw2-wz-oA5"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="zw2-wz-oA5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3K-hK-uJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-251" y="-521"/>
+        </scene>
+        <!--Write-->
+        <scene sceneID="FL8-Hb-iIv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Write" id="bo2-h6-qLR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="nmL-2x-pEK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZP-mS-DJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="-216"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.21568627450980393" green="0.28235294117647058" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

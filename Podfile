@@ -8,4 +8,6 @@ target 'NamYangju-Hackathon' do
   # Pods for NamYangju-Hackathon
 pod 'Alamofire', '~> 4.7'
 pod 'Motion'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'SDWebImage/WebP'
 end
