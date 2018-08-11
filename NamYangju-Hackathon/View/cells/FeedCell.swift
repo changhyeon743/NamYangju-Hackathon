@@ -13,6 +13,8 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
     
+    @IBOutlet weak var gradientView: UIView!
+    
     var title:String = "" {
         didSet {
             textLabel.text = title
@@ -26,6 +28,13 @@ class FeedCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.black.cgColor,UIColor.clear.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.frame = gradientView.bounds
+        gradientView.layer.addSublayer(gradientLayer)
         // Initialization code
         
 //        self.layer.shadowOffset = CGSize(width: 5, height: 5)

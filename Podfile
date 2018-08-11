@@ -6,5 +6,6 @@ target 'NamYangju-Hackathon' do
   use_frameworks!
 
   # Pods for NamYangju-Hackathon
-
+pod 'Alamofire', '~> 4.7'
+pod 'Motion'
 end

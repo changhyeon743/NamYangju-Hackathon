@@ -40,11 +40,137 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="OJ3-Ua-meR" id="SjN-eh-goo"/>
+                        <segue destination="gZx-Ld-3Ao" kind="show" identifier="show_detail" id="8Dp-zU-5DF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="102"/>
+            <point key="canvasLocation" x="212" y="-50"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="7AP-Xq-Rg4">
+            <objects>
+                <viewController id="gZx-Ld-3Ao" customClass="DetailVC" customModule="NamYangju_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tev-9X-2DB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-sa-e7D">
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XG1-s6-lIA" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NkB-Bf-vum">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="77s-ki-cLf"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="motionIdentifier" value="img"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-RQ-Mo6">
+                                                <rect key="frame" x="15" y="320" width="345" height="680"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <mutableString key="content">오규석 부산 기장군수가 지난 3월에 이어 다시 원자력안전위원회 앞에서 1인 시위를 했습니다.
+
+기장군 동남권 방사선의과학단지에 들어설 '수출용 신형연구로'의 조속한 건설허가를 촉구하기 위해서입니다.
+
+수출용 신형연구로는 암의 조기 진단과 치료에 사용되는 의료용 방사성 동위원소를 생산하는 시설입니다.
+
+향후 50년간 38조의 경제적 이윤 창출이 기대돼 지난 2010년 치열한 경쟁 끝에 기장군이 유치한 사업입니다.
+
+하지만 후쿠시마 원전사고와 경주지진 여파로 원자력안전위원회가 안전성 심사를 강화하면서 건설허가가 기약 없이 지연되고 있습니다.
+
+[오규석 / 부산 기장군수 : 원자력 발전소와 비해 규모나 용량 면에서 3백분의 1조차 안됩니다. 원전과 같은 잣대로 심사하고 있는 겁니다.]
+
+애초 지난해 건설 승인이 날 것으로 봤지만, 승인이 늦어지자 3천5백억 원을 투입해 기장군에 조성 중인 동남권방사선의과학단지가 직격탄을 맞고 있습니다.
+
+150만㎡에 달하는 부지 조성 사업이 진행되고 있지만 들어올 기관이나 기업이 없습니다.
+
+핵심시설인 수출용 신형연구로 건설 허가가 늦춰지면서 관련 업종의 기업들도 투자의사를 망설이고 있습니다.
+
+애초 예상된 입주기업은 2백여 개나 됐지만, 아직 분양 계약을 맺은 곳은 없습니다.
+
+이를 지켜보는 주민들도 애가 탑니다.</mutableString>
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Light"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="20" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="NkB-Bf-vum" firstAttribute="top" secondItem="XG1-s6-lIA" secondAttribute="top" id="2S8-vw-6cD"/>
+                                            <constraint firstAttribute="bottom" secondItem="OMQ-RQ-Mo6" secondAttribute="bottom" id="5TK-wD-WBp"/>
+                                            <constraint firstAttribute="trailing" secondItem="NkB-Bf-vum" secondAttribute="trailing" id="9DR-tA-JnV"/>
+                                            <constraint firstItem="OMQ-RQ-Mo6" firstAttribute="top" secondItem="NkB-Bf-vum" secondAttribute="bottom" constant="20" id="KgG-Ej-ZHK"/>
+                                            <constraint firstAttribute="trailing" secondItem="OMQ-RQ-Mo6" secondAttribute="trailing" constant="15" id="c7o-Au-XFR"/>
+                                            <constraint firstItem="NkB-Bf-vum" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" id="qhG-pO-Obz"/>
+                                            <constraint firstItem="OMQ-RQ-Mo6" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" constant="15" id="sQ1-LL-WB9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XG1-s6-lIA" firstAttribute="leading" secondItem="aKO-sa-e7D" secondAttribute="leading" id="4VS-2Z-iXc"/>
+                                    <constraint firstAttribute="bottom" secondItem="XG1-s6-lIA" secondAttribute="bottom" id="Hbe-h6-3vo"/>
+                                    <constraint firstAttribute="trailing" secondItem="XG1-s6-lIA" secondAttribute="trailing" id="imw-ws-YQJ"/>
+                                    <constraint firstItem="XG1-s6-lIA" firstAttribute="top" secondItem="aKO-sa-e7D" secondAttribute="top" id="qAl-0f-MuE"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knv-lQ-VXg">
+                                <rect key="frame" x="310" y="36" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="4gM-5O-les"/>
+                                    <constraint firstAttribute="height" constant="49" id="QEz-Sn-nJG"/>
+                                </constraints>
+                                <state key="normal" image="cancel.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="gZx-Ld-3Ao" eventType="touchUpInside" id="sn4-A9-wjf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Knv-lQ-VXg" firstAttribute="top" secondItem="EaQ-fe-rxX" secondAttribute="top" constant="16" id="JOM-xO-ZrO"/>
+                            <constraint firstItem="aKO-sa-e7D" firstAttribute="leading" secondItem="EaQ-fe-rxX" secondAttribute="leading" id="MFF-yW-eMh"/>
+                            <constraint firstItem="EaQ-fe-rxX" firstAttribute="trailing" secondItem="Knv-lQ-VXg" secondAttribute="trailing" constant="16" id="TuE-20-7P4"/>
+                            <constraint firstItem="aKO-sa-e7D" firstAttribute="top" secondItem="EaQ-fe-rxX" secondAttribute="top" id="gqT-lG-gE3"/>
+                            <constraint firstItem="XG1-s6-lIA" firstAttribute="width" secondItem="tev-9X-2DB" secondAttribute="width" id="oAR-vB-Cfj"/>
+                            <constraint firstItem="XG1-s6-lIA" firstAttribute="height" secondItem="tev-9X-2DB" secondAttribute="height" id="yeQ-2p-elv"/>
+                            <constraint firstItem="EaQ-fe-rxX" firstAttribute="bottom" secondItem="aKO-sa-e7D" secondAttribute="bottom" id="ywf-gv-ya0"/>
+                            <constraint firstItem="EaQ-fe-rxX" firstAttribute="trailing" secondItem="aKO-sa-e7D" secondAttribute="trailing" id="zHa-AS-tjd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EaQ-fe-rxX"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="imageView" destination="NkB-Bf-vum" id="yrE-Dw-8x0"/>
+                        <outlet property="textView" destination="OMQ-RQ-Mo6" id="Pvy-ka-rKx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJq-hk-7fB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="66.566716641679164"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cancel.png" width="36" height="36"/>
+        <image name="temp.jpg" width="800" height="534"/>
+    </resources>
 </document>

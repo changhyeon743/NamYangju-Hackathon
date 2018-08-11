@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1612DC4A418B21F47730211A /* Pods_NamYangju_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34414AAE34371802C36F68 /* Pods_NamYangju_Hackathon.framework */; };
 		78633E7A211EC17100E658C4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78633E79211EC17100E658C4 /* LoginVC.swift */; };
+		787BD39C211F061100027ED2 /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 787BD39B211F061100027ED2 /* thumb.png */; };
+		787BD39E211F084100027ED2 /* Write.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787BD39D211F084100027ED2 /* Write.storyboard */; };
+		787BD3A0211F0AF000027ED2 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 787BD39F211F0AF000027ED2 /* cancel.png */; };
 		787BE5D2211EB37200485B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BE5D1211EB37200485B62 /* AppDelegate.swift */; };
 		787BE5D4211EB37200485B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BE5D3211EB37200485B62 /* ViewController.swift */; };
 		787BE5D7211EB37200485B62 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787BE5D5211EB37200485B62 /* Feed.storyboard */; };
@@ -21,11 +24,15 @@
 		78E4B36F211EBD180088898D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E4B36E211EBD180088898D /* Login.storyboard */; };
 		78E4B374211EC0670088898D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E4B373211EC0670088898D /* API.swift */; };
 		78E4B378211EC1310088898D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E4B377211EC1310088898D /* RegisterVC.swift */; };
+		78ECA848211ED26B005070E5 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECA847211ED26B005070E5 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		583D90F463716C46E947659F /* Pods-NamYangju-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamYangju-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NamYangju-Hackathon/Pods-NamYangju-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		78633E79211EC17100E658C4 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		787BD39B211F061100027ED2 /* thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb.png; sourceTree = "<group>"; };
+		787BD39D211F084100027ED2 /* Write.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Write.storyboard; sourceTree = "<group>"; };
+		787BD39F211F0AF000027ED2 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		787BE5CE211EB37200485B62 /* NamYangju-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NamYangju-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787BE5D1211EB37200485B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787BE5D3211EB37200485B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +47,7 @@
 		78E4B36E211EBD180088898D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		78E4B373211EC0670088898D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		78E4B377211EC1310088898D /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		78ECA847211ED26B005070E5 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailVC.swift; path = "NamYangju-Hackathon/Controller/DetailVC.swift"; sourceTree = SOURCE_ROOT; };
 		9A34414AAE34371802C36F68 /* Pods_NamYangju_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NamYangju_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B730B45B635677EC7C5B98 /* Pods-NamYangju-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamYangju-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-NamYangju-Hackathon/Pods-NamYangju-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +113,8 @@
 			children = (
 				78E4B367211EBA5E0088898D /* temp.jpg */,
 				787BE5D1211EB37200485B62 /* AppDelegate.swift */,
+				787BD39F211F0AF000027ED2 /* cancel.png */,
+				787BD39B211F061100027ED2 /* thumb.png */,
 				78E4B372211EC05B0088898D /* Model */,
 				78E4B379211EC13A0088898D /* Controller */,
 				78E4B369211EBB6B0088898D /* View */,
@@ -122,6 +132,7 @@
 				787BE5D5211EB37200485B62 /* Feed.storyboard */,
 				78E4B36C211EBBA80088898D /* TabBar.storyboard */,
 				78E4B36E211EBD180088898D /* Login.storyboard */,
+				787BD39D211F084100027ED2 /* Write.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 			children = (
 				787BE5D3211EB37200485B62 /* ViewController.swift */,
 				78633E79211EC17100E658C4 /* LoginVC.swift */,
+				78ECA847211ED26B005070E5 /* DetailVC.swift */,
 				78E4B377211EC1310088898D /* RegisterVC.swift */,
 			);
 			path = Controller;
@@ -155,6 +167,7 @@
 				787BE5CA211EB37200485B62 /* Sources */,
 				787BE5CB211EB37200485B62 /* Frameworks */,
 				787BE5CC211EB37200485B62 /* Resources */,
+				C43F09CE1560479899E34C9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +218,9 @@
 			files = (
 				787BE5DC211EB37500485B62 /* LaunchScreen.storyboard in Resources */,
 				787BE5E6211EB4FB00485B62 /* FeedCell.xib in Resources */,
+				787BD39E211F084100027ED2 /* Write.storyboard in Resources */,
+				787BD3A0211F0AF000027ED2 /* cancel.png in Resources */,
+				787BD39C211F061100027ED2 /* thumb.png in Resources */,
 				78E4B36F211EBD180088898D /* Login.storyboard in Resources */,
 				787BE5D9211EB37500485B62 /* Assets.xcassets in Resources */,
 				78E4B368211EBA5E0088898D /* temp.jpg in Resources */,
@@ -234,6 +250,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C43F09CE1560479899E34C9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NamYangju-Hackathon/Pods-NamYangju-Hackathon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NamYangju-Hackathon/Pods-NamYangju-Hackathon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -247,6 +283,7 @@
 				78E4B378211EC1310088898D /* RegisterVC.swift in Sources */,
 				787BE5E5211EB4FB00485B62 /* FeedCell.swift in Sources */,
 				78E4B374211EC0670088898D /* API.swift in Sources */,
+				78ECA848211ED26B005070E5 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

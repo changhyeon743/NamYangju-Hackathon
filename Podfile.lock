@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: bd1dbf85692c7d37a6878fe3b480ab6612bb2d67
+PODS:
+  - Alamofire (4.7.2)
+  - Motion (1.4.3):
+    - Motion/Core (= 1.4.3)
+  - Motion/Core (1.4.3)
 
-COCOAPODS: 1.5.0
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Motion
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Motion
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Motion: 153ba49692997888556c7a95207278a8b1f8be95
+
+PODFILE CHECKSUM: 0e9f500713cd1603c2ab2715bc05650de1d561ad
+
+COCOAPODS: 1.5.3
