@@ -8,22 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		1612DC4A418B21F47730211A /* Pods_NamYangju_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34414AAE34371802C36F68 /* Pods_NamYangju_Hackathon.framework */; };
+		78633E7A211EC17100E658C4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78633E79211EC17100E658C4 /* LoginVC.swift */; };
 		787BE5D2211EB37200485B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BE5D1211EB37200485B62 /* AppDelegate.swift */; };
 		787BE5D4211EB37200485B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BE5D3211EB37200485B62 /* ViewController.swift */; };
-		787BE5D7211EB37200485B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787BE5D5211EB37200485B62 /* Main.storyboard */; };
+		787BE5D7211EB37200485B62 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787BE5D5211EB37200485B62 /* Feed.storyboard */; };
 		787BE5D9211EB37500485B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787BE5D8211EB37500485B62 /* Assets.xcassets */; };
 		787BE5DC211EB37500485B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787BE5DA211EB37500485B62 /* LaunchScreen.storyboard */; };
+		787BE5E5211EB4FB00485B62 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BE5E3211EB4FB00485B62 /* FeedCell.swift */; };
+		787BE5E6211EB4FB00485B62 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787BE5E4211EB4FB00485B62 /* FeedCell.xib */; };
+		78E4B368211EBA5E0088898D /* temp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78E4B367211EBA5E0088898D /* temp.jpg */; };
+		78E4B36D211EBBA80088898D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E4B36C211EBBA80088898D /* TabBar.storyboard */; };
+		78E4B36F211EBD180088898D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E4B36E211EBD180088898D /* Login.storyboard */; };
+		78E4B374211EC0670088898D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E4B373211EC0670088898D /* API.swift */; };
+		78E4B378211EC1310088898D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E4B377211EC1310088898D /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		583D90F463716C46E947659F /* Pods-NamYangju-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamYangju-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NamYangju-Hackathon/Pods-NamYangju-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		78633E79211EC17100E658C4 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		787BE5CE211EB37200485B62 /* NamYangju-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NamYangju-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787BE5D1211EB37200485B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787BE5D3211EB37200485B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		787BE5D6211EB37200485B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		787BE5D6211EB37200485B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Feed.storyboard; sourceTree = "<group>"; };
 		787BE5D8211EB37500485B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787BE5DB211EB37500485B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		787BE5DD211EB37500485B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		787BE5E3211EB4FB00485B62 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		787BE5E4211EB4FB00485B62 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		78E4B367211EBA5E0088898D /* temp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp.jpg; sourceTree = "<group>"; };
+		78E4B36C211EBBA80088898D /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		78E4B36E211EBD180088898D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		78E4B373211EC0670088898D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		78E4B377211EC1310088898D /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		9A34414AAE34371802C36F68 /* Pods_NamYangju_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NamYangju_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B730B45B635677EC7C5B98 /* Pods-NamYangju-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamYangju-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-NamYangju-Hackathon/Pods-NamYangju-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +73,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		78633E7B211EC6E800E658C4 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				787BE5E4211EB4FB00485B62 /* FeedCell.xib */,
+				787BE5E3211EB4FB00485B62 /* FeedCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		787BE5C5211EB37200485B62 = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +103,45 @@
 		787BE5D0211EB37200485B62 /* NamYangju-Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				78E4B367211EBA5E0088898D /* temp.jpg */,
 				787BE5D1211EB37200485B62 /* AppDelegate.swift */,
-				787BE5D3211EB37200485B62 /* ViewController.swift */,
-				787BE5D5211EB37200485B62 /* Main.storyboard */,
+				78E4B372211EC05B0088898D /* Model */,
+				78E4B379211EC13A0088898D /* Controller */,
+				78E4B369211EBB6B0088898D /* View */,
 				787BE5D8211EB37500485B62 /* Assets.xcassets */,
 				787BE5DA211EB37500485B62 /* LaunchScreen.storyboard */,
 				787BE5DD211EB37500485B62 /* Info.plist */,
 			);
 			path = "NamYangju-Hackathon";
+			sourceTree = "<group>";
+		};
+		78E4B369211EBB6B0088898D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78633E7B211EC6E800E658C4 /* cells */,
+				787BE5D5211EB37200485B62 /* Feed.storyboard */,
+				78E4B36C211EBBA80088898D /* TabBar.storyboard */,
+				78E4B36E211EBD180088898D /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78E4B372211EC05B0088898D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78E4B373211EC0670088898D /* API.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78E4B379211EC13A0088898D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				787BE5D3211EB37200485B62 /* ViewController.swift */,
+				78633E79211EC17100E658C4 /* LoginVC.swift */,
+				78E4B377211EC1310088898D /* RegisterVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				787BE5DC211EB37500485B62 /* LaunchScreen.storyboard in Resources */,
+				787BE5E6211EB4FB00485B62 /* FeedCell.xib in Resources */,
+				78E4B36F211EBD180088898D /* Login.storyboard in Resources */,
 				787BE5D9211EB37500485B62 /* Assets.xcassets in Resources */,
-				787BE5D7211EB37200485B62 /* Main.storyboard in Resources */,
+				78E4B368211EBA5E0088898D /* temp.jpg in Resources */,
+				78E4B36D211EBBA80088898D /* TabBar.storyboard in Resources */,
+				787BE5D7211EB37200485B62 /* Feed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,18 +243,22 @@
 			files = (
 				787BE5D4211EB37200485B62 /* ViewController.swift in Sources */,
 				787BE5D2211EB37200485B62 /* AppDelegate.swift in Sources */,
+				78633E7A211EC17100E658C4 /* LoginVC.swift in Sources */,
+				78E4B378211EC1310088898D /* RegisterVC.swift in Sources */,
+				787BE5E5211EB4FB00485B62 /* FeedCell.swift in Sources */,
+				78E4B374211EC0670088898D /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		787BE5D5211EB37200485B62 /* Main.storyboard */ = {
+		787BE5D5211EB37200485B62 /* Feed.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				787BE5D6211EB37200485B62 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Feed.storyboard;
 			sourceTree = "<group>";
 		};
 		787BE5DA211EB37500485B62 /* LaunchScreen.storyboard */ = {
@@ -330,7 +394,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A358VZ5QEA;
 				INFOPLIST_FILE = "NamYangju-Hackathon/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "changhyeon.NamYangju-Hackathon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -346,7 +413,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A358VZ5QEA;
 				INFOPLIST_FILE = "NamYangju-Hackathon/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "changhyeon.NamYangju-Hackathon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
