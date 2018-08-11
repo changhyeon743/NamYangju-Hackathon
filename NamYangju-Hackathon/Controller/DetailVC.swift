@@ -26,6 +26,12 @@ class DetailVC: UIViewController {
         }
     }
     
+    var image:UIImage = #imageLiteral(resourceName: "temp.jpg") {
+        didSet {
+            imageView.image = image
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         isMotionEnabled = true

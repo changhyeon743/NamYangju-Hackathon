@@ -45,9 +45,6 @@
                                     <constraint firstAttribute="width" constant="44" id="mYd-34-G4U"/>
                                 </constraints>
                                 <state key="normal" image="thumb.png"/>
-                                <connections>
-                                    <action selector="likeButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="34P-55-gFX"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0개의 관심" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kia-h7-vXk">
                                 <rect key="frame" x="44" y="12" width="253" height="20.5"/>
@@ -80,6 +77,7 @@
             <connections>
                 <outlet property="gradientView" destination="zJT-xR-Ji0" id="XKE-HN-m2d"/>
                 <outlet property="imageView" destination="IDc-4s-4ZT" id="DQQ-De-1ZT"/>
+                <outlet property="likeButton" destination="p1z-KN-8GJ" id="PUC-nl-9xd"/>
                 <outlet property="likeLabel" destination="Kia-h7-vXk" id="b7E-3A-m9f"/>
                 <outlet property="textLabel" destination="XWH-sS-UGW" id="fNF-Mu-spf"/>
             </connections>

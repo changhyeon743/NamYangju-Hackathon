@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 import Motion
 
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
@@ -87,9 +88,15 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FeedCell
         cell.title = items[indexPath.row].title
-        cell.image = #imageLiteral(resourceName: "temp.jpg")
+        if let image:String = items[indexPath.row].pictureurl {
+            //TODO: 이미지가 없는 조건 알기
+            print(image)
+            cell.imageView. .sd_setImage(with: URL(string: image), completed: nil)
+            
+        }
         cell.like = items[indexPath.row].good
-        
+        cell.likeButton.addTarget(self, action: #selector(masterAction(_:)), for: .touchUpInside)
+
         //cell.backgroundColor = randomColor()
         
         return cell
@@ -115,16 +122,30 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
         
         
         let viewController:DetailVC = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
-        
-        
         present(viewController, animated: true) {
             viewController.detail = items[indexPath.row].content
             viewController.titleText = items[indexPath.row].title
+            viewController.image = cell.image
         }
         
         //cell.resize(to:CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width))
     }
     
+    @objc func masterAction(_ sender: UIButton)
+    {
+        let path = collectionView?.indexPath(for: ((sender.superview?.superview?.superview) as! FeedCell))?.row ?? 0
+        
+        API.thumb_up(boardid: items[path].id, memberid: currentUser?.id ?? "",completion: {(bool) in
+            self.fetchPosts()
+        })
+    }
     
+    func fetchPosts() {
+        API.fetch_posts(completion: { (posts) in
+            API.setItems(posts: posts)
+            self.collectionView.reloadData()
+        })
+    }
+
     
 }

@@ -19,6 +19,40 @@ class API {
         items = posts
     }
     
+    static func thumb_up(boardid:String,memberid:String,completion:@escaping (Bool)->Void) {
+        let headers = [
+            "Content-Type": "application/json",
+            "Cache-Control": "no-cache",
+            "Postman-Token": "505443c9-48fb-4d54-bfd4-05d61f5af62d"
+        ]
+        let parameters = [
+            "boardid": boardid,
+            "memberid": memberid
+            ] as [String : Any]
+        
+        let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://13.209.180.114:8081/boards/good")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                completion(true)
+            }
+        })
+        
+        dataTask.resume()
+    }
+    
+    
     static func fetch_posts(id:Int, completion:@escaping([Post])->Void) {
         let baseUrl = "http://13.209.180.114:8081/boards/search?id=\(id)"
         
