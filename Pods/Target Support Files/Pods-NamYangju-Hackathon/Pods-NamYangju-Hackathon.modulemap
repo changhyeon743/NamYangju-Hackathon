@@ -1,0 +1,6 @@
+framework module Pods_NamYangju_Hackathon {
+  umbrella header "Pods-NamYangju-Hackathon-umbrella.h"
+
+  export *
+  module * { export * }
+}
