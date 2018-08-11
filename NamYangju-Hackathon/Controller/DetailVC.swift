@@ -10,8 +10,21 @@ import UIKit
 
 class DetailVC: UIViewController {
 
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    var titleText:String = "" {
+        didSet {
+            titleLabel.text = titleText
+        }
+    }
+    
+    var detail:String = "" {
+        didSet {
+            detailLabel.text = detail
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +34,11 @@ class DetailVC: UIViewController {
     }
     func setAnimation() {
         imageView.motionIdentifier = "foo"
-        textLabel.motionIdentifier = "bar"
+        titleLabel.motionIdentifier = "bar"
 
     }
+    
+    
 
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true) {

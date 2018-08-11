@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - Alertift (3.2)
   - libwebp (0.6.1):
     - libwebp/core (= 0.6.1)
     - libwebp/dec (= 0.6.1)
@@ -35,6 +36,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Alertift (~> 3.0)
   - Motion
   - SDWebImage/WebP
   - SwiftyJSON (~> 4.0)
@@ -42,6 +44,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Alertift
     - libwebp
     - Motion
     - SDWebImage
@@ -49,11 +52,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alertift: df0df24a557e47360180092f5f3fceb675c96b51
   libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: ce24517e4f9d71de59493cc24af57964fec7eed3
+PODFILE CHECKSUM: b5fe0ee67d60a26b0b8d7089aa956ce482ec58aa
 
 COCOAPODS: 1.5.3

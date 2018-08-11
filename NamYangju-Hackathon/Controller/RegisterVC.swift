@@ -27,6 +27,9 @@ class RegisterVC: UIViewController {
         
         
         nameField.inputAccessoryView = toolbar
+        passwordField.inputAccessoryView = toolbar
+        idField.inputAccessoryView = toolbar
+        emailField.inputAccessoryView = toolbar
         passwordCheckField.inputAccessoryView = toolbar
     }
     
@@ -59,8 +62,12 @@ class RegisterVC: UIViewController {
         }
         print("Sended")
         API.send(id: id, password: password, email: email, username: username) { (user) in
-            print(user)
+            self.setCurrentUser(with: user)
+            self.dismiss(animated: true, completion: nil)
         }
+    }
+    func setCurrentUser(with:User) {
+        currentUser = with
     }
     
 }

@@ -10,4 +10,5 @@ pod 'Alamofire', '~> 4.7'
 pod 'Motion'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'SDWebImage/WebP'
+pod 'Alertift', '~> 3.0'
 end

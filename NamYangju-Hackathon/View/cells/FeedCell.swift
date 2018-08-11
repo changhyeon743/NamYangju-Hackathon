@@ -13,6 +13,7 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
     
+    @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var gradientView: UIView!
     
     var title:String = "" {
@@ -23,6 +24,11 @@ class FeedCell: UICollectionViewCell {
     var image:UIImage = #imageLiteral(resourceName: "temp.jpg") {
         didSet {
             imageView.image = image
+        }
+    }
+    var like:Int = 0 {
+        didSet {
+            likeLabel.text = "\(like)개의 관심"
         }
     }
     

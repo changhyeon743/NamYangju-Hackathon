@@ -8,19 +8,68 @@
 
 import UIKit
 import Motion
+
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
-    let items = ["안녕","하","세요"]
-
+    
+    private let refreshControl = UIRefreshControl() 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    
+    
+    func setToolBar() {
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.tabBarDonePressed))
+        
+        
+        toolbar.setItems([flexibleSpace,doneBtn], animated: false)
+        
+        
+        textField.inputAccessoryView = toolbar
+        
+    }
+    
+    @objc func tabBarDonePressed() {
+        self.view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isMotionEnabled = true
+        
+        setToolBar()
+        
 
         collectionView.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         // Do any additional setup after loading the view, typically from a nib.
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Data ...")
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
+        
     }
+    @objc func refresh(_ sender:Any) {
+        
+        API.fetch_posts(completion: { (posts) in
+            API.setItems(posts: posts)
+            self.collectionView.reloadData()
+            self.refreshControl.endRefreshing()
+        })
+        
+    }
+    
+    @IBAction func searchBtnPressed(_ sender: UIButton) {
+        API.fetch_posts(title: textField.text ?? "무제",completion: { (posts) in
+            API.setItems(posts: posts)
+            self.collectionView.reloadData()
+            self.view.endEditing(true)
+        })
+    }
+    
 }
 
 
@@ -28,16 +77,19 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
 extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width-60, height: view.frame.height - 180)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FeedCell
-        cell.title = "일본군 성노예제 문제 해결"
+        cell.title = items[indexPath.row].title
         cell.image = #imageLiteral(resourceName: "temp.jpg")
+        cell.like = items[indexPath.row].good
+        
         //cell.backgroundColor = randomColor()
         
         return cell
@@ -60,9 +112,19 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
         cell.imageView.motionIdentifier = "foo"
         cell.textLabel.motionIdentifier = "bar"
         
-        performSegue(withIdentifier: "show_detail", sender: cell)
+        
+        
+        let viewController:DetailVC = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+        
+        
+        present(viewController, animated: true) {
+            viewController.detail = items[indexPath.row].content
+            viewController.titleText = items[indexPath.row].title
+        }
         
         //cell.resize(to:CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width))
     }
+    
+    
     
 }

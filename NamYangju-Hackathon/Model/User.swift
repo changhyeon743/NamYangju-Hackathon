@@ -18,6 +18,8 @@ struct User {
     
 }
 
+var currentUser:User?
+
 extension User {
     static func userTransform(temp:JSON,id:String) -> User {
         let user = User(id: id, password: temp["password"].stringValue, email: temp["email"].stringValue, name: temp["username"].stringValue)

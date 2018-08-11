@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3745853842721B16F9667F29E03BB416"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "41719BA5DD69011FCC2BDBE320DE210D"
+               BlueprintName = "Alertift"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SDWebImage.framework">
+               BuildableName = "Alertift.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

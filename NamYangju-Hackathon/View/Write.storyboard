@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="게시물" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-ar-SAB">
-                                <rect key="frame" x="16" y="75" width="343" height="436"/>
+                                <rect key="frame" x="16" y="139" width="343" height="372"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -30,6 +30,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="okButtonPressed:" destination="I5N-ec-RPg" eventType="touchUpInside" id="YAg-AC-q7o"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9e-x8-0lc">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -38,6 +41,13 @@
                                     <navigationItem title="글 작성" id="ZmU-Xw-vIw"/>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-uj-AzO">
+                                <rect key="frame" x="16" y="92" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tz4-Wo-yGR"/>
@@ -45,12 +55,13 @@
                     <tabBarItem key="tabBarItem" systemItem="more" id="8nR-OQ-TAb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="nameField" destination="pYV-uj-AzO" id="cAw-Uv-8Ki"/>
                         <outlet property="textView" destination="4gD-ar-SAB" id="r3h-V7-KZn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1e-7f-DGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-228.5" y="65.5"/>
+            <point key="canvasLocation" x="-229.59999999999999" y="65.217391304347828"/>
         </scene>
     </scenes>
 </document>

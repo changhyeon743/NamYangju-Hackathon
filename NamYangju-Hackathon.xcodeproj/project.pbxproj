@@ -14,6 +14,8 @@
 		787BD3A0211F0AF000027ED2 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 787BD39F211F0AF000027ED2 /* cancel.png */; };
 		787BD3A4211F12F500027ED2 /* WriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BD3A3211F12F500027ED2 /* WriteVC.swift */; };
 		787BD3A6211F19C500027ED2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BD3A5211F19C500027ED2 /* User.swift */; };
+		787BD3A8211F487700027ED2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BD3A7211F487700027ED2 /* Post.swift */; };
+		787BD3AA211F564000027ED2 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 787BD3A9211F564000027ED2 /* logo.png */; };
 		787BE5D2211EB37200485B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BE5D1211EB37200485B62 /* AppDelegate.swift */; };
 		787BE5D4211EB37200485B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BE5D3211EB37200485B62 /* ViewController.swift */; };
 		787BE5D7211EB37200485B62 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787BE5D5211EB37200485B62 /* Feed.storyboard */; };
@@ -37,6 +39,8 @@
 		787BD39F211F0AF000027ED2 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		787BD3A3211F12F500027ED2 /* WriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WriteVC.swift; path = ../View/WriteVC.swift; sourceTree = "<group>"; };
 		787BD3A5211F19C500027ED2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		787BD3A7211F487700027ED2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		787BD3A9211F564000027ED2 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		787BE5CE211EB37200485B62 /* NamYangju-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NamYangju-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787BE5D1211EB37200485B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787BE5D3211EB37200485B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			children = (
 				78E4B367211EBA5E0088898D /* temp.jpg */,
 				787BE5D1211EB37200485B62 /* AppDelegate.swift */,
+				787BD3A9211F564000027ED2 /* logo.png */,
 				787BD39F211F0AF000027ED2 /* cancel.png */,
 				787BD39B211F061100027ED2 /* thumb.png */,
 				78E4B372211EC05B0088898D /* Model */,
@@ -146,6 +151,7 @@
 			children = (
 				78E4B373211EC0670088898D /* API.swift */,
 				787BD3A5211F19C500027ED2 /* User.swift */,
+				787BD3A7211F487700027ED2 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				787BE5E6211EB4FB00485B62 /* FeedCell.xib in Resources */,
 				787BD39E211F084100027ED2 /* Write.storyboard in Resources */,
 				787BD3A0211F0AF000027ED2 /* cancel.png in Resources */,
+				787BD3AA211F564000027ED2 /* logo.png in Resources */,
 				787BD39C211F061100027ED2 /* thumb.png in Resources */,
 				78E4B36F211EBD180088898D /* Login.storyboard in Resources */,
 				787BE5D9211EB37500485B62 /* Assets.xcassets in Resources */,
@@ -264,6 +271,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NamYangju-Hackathon/Pods-NamYangju-Hackathon-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -272,6 +280,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -298,6 +307,7 @@
 				787BE5E5211EB4FB00485B62 /* FeedCell.swift in Sources */,
 				78E4B374211EC0670088898D /* API.swift in Sources */,
 				78ECA848211ED26B005070E5 /* DetailVC.swift in Sources */,
+				787BD3A8211F487700027ED2 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,11 +455,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A358VZ5QEA;
 				INFOPLIST_FILE = "NamYangju-Hackathon/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "changhyeon.NamYangju-Hackathon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -461,11 +474,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A358VZ5QEA;
 				INFOPLIST_FILE = "NamYangju-Hackathon/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "changhyeon.NamYangju-Hackathon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sF-h0-70n">
                                 <rect key="frame" x="93" y="318" width="39" height="30"/>
@@ -38,7 +38,6 @@
                                 <state key="normal" title="로그인"/>
                                 <connections>
                                     <action selector="login:" destination="F3M-vQ-daF" eventType="touchUpInside" id="HKh-Xn-AyZ"/>
-                                    <segue destination="Plb-Eh-3ss" kind="show" identifier="login" id="1gU-pA-mw9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSv-bl-g9K">
@@ -49,13 +48,10 @@
                                     <segue destination="m5L-iA-aZV" kind="show" id="tuO-kP-xRX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See We" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb6-ns-pSV">
-                                <rect key="frame" x="158" y="112" width="59" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ycK-JW-M16">
+                                <rect key="frame" x="137" y="62" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gAp-wG-U98"/>
@@ -66,6 +62,7 @@
                         <outlet property="loginBtn" destination="3sF-h0-70n" id="W4c-Jn-zVG"/>
                         <outlet property="passwordField" destination="a5i-iJ-kGG" id="V6x-79-X2s"/>
                         <outlet property="registerBtn" destination="WSv-bl-g9K" id="aXN-MZ-qhm"/>
+                        <segue destination="Plb-Eh-3ss" kind="show" identifier="login" id="uyq-Wg-psx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaz-MP-Fc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,7 +98,7 @@
                                         <rect key="frame" x="0.0" y="36" width="345" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xq3-8t-Nzo">
                                         <rect key="frame" x="0.0" y="72" width="345" height="30"/>
@@ -173,4 +170,8 @@
             <point key="canvasLocation" x="2084" y="-143.47826086956522"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="500" height="500"/>
+    </resources>
+    <color key="tintColor" red="0.31764705882352939" green="0.29411764705882354" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

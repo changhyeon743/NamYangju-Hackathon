@@ -7,16 +7,28 @@
 //
 
 import UIKit
+import Alertift
+
 
 class WriteVC: UIViewController {
 
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setToolBar()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func okButtonPressed(_ sender: UIButton) {
+        API.upload_post(title: nameField.text ?? "무제", content: textView.text, completion: { (bool) in
+            Alertift.alert(title: "성공", message: "게시물을 올렸습니다. 확인해보세요. ><")
+                .action(.default("확인"))
+                .show(on:self)
+        })
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,7 +43,7 @@ class WriteVC: UIViewController {
         
         toolbar.setItems([flexibleSpace,doneBtn], animated: false)
         
-        
+        nameField.inputAccessoryView = toolbar
         textView.inputAccessoryView = toolbar
     }
     
