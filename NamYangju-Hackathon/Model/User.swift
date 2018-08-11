@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import SwiftyJSON
+import Alamofire
+
+struct User {
+    var id:String
+    var password:String
+    var email:String
+    var name:String
+    
+}
+
+extension User {
+    static func userTransform(temp:JSON,id:String) -> User {
+        let user = User(id: id, password: temp["password"].stringValue, email: temp["email"].stringValue, name: temp["username"].stringValue)
+        
+        return user
+    }
+}

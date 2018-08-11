@@ -91,7 +91,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Q9d-Va-TR5">
                                 <rect key="frame" x="15" y="146.5" width="345" height="174"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBn-3Y-aCT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBn-3Y-aCT">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -131,6 +131,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="okButton:" destination="m5L-iA-aZV" eventType="touchUpInside" id="1r2-Do-fn7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPu-9W-0dn">
                                 <rect key="frame" x="7" y="27" width="69" height="39"/>
@@ -157,6 +160,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KtX-wW-7TX"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="xrd-lu-m05" id="c8O-72-IJ8"/>
+                        <outlet property="idField" destination="Xq3-8t-Nzo" id="xLr-Ls-eNp"/>
+                        <outlet property="nameField" destination="QBn-3Y-aCT" id="oR0-9D-Yca"/>
+                        <outlet property="passwordCheckField" destination="qn8-pk-52M" id="GTl-zf-OSx"/>
+                        <outlet property="passwordField" destination="9BJ-O3-VQc" id="Au1-iM-bzL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0au-wk-3Hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
