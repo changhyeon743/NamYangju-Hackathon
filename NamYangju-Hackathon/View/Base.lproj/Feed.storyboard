@@ -78,9 +78,9 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XG1-s6-lIA" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="391"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NkB-Bf-vum">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NkB-Bf-vum">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="77s-ki-cLf"/>
@@ -89,37 +89,39 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="motionIdentifier" value="img"/>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-ZB-QH3">
-                                                <rect key="frame" x="15" y="355.5" width="345" height="20.5"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="디테일">
-                                                        <attributes>
-                                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="BM0-Ra-LZ0">
-                                                <rect key="frame" x="15" y="315" width="345" height="20.5"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jn3-RA-gdC">
+                                                <rect key="frame" x="15" y="315" width="345" height="53"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="BM0-Ra-LZ0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-ZB-QH3">
+                                                        <rect key="frame" x="0.0" y="32.5" width="345" height="20.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="디테일">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="17" name="AppleSDGothicNeo-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="4AP-ZB-QH3" secondAttribute="bottom" constant="15" id="1j8-CV-3DD"/>
+                                            <constraint firstAttribute="bottom" secondItem="jn3-RA-gdC" secondAttribute="bottom" constant="15" id="1jm-c0-x5J"/>
                                             <constraint firstItem="NkB-Bf-vum" firstAttribute="top" secondItem="XG1-s6-lIA" secondAttribute="top" id="2S8-vw-6cD"/>
                                             <constraint firstAttribute="trailing" secondItem="NkB-Bf-vum" secondAttribute="trailing" id="9DR-tA-JnV"/>
-                                            <constraint firstAttribute="trailing" secondItem="4AP-ZB-QH3" secondAttribute="trailing" constant="15" id="IxU-kP-lzK"/>
-                                            <constraint firstItem="4AP-ZB-QH3" firstAttribute="top" secondItem="BM0-Ra-LZ0" secondAttribute="bottom" constant="20" id="XJd-b0-k5t"/>
-                                            <constraint firstAttribute="trailing" secondItem="BM0-Ra-LZ0" secondAttribute="trailing" constant="15" id="ZmW-4S-dhC"/>
-                                            <constraint firstItem="4AP-ZB-QH3" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" constant="15" id="aN3-rv-UWA"/>
+                                            <constraint firstAttribute="trailing" secondItem="jn3-RA-gdC" secondAttribute="trailing" constant="15" id="hju-hO-q5b"/>
+                                            <constraint firstItem="jn3-RA-gdC" firstAttribute="top" secondItem="NkB-Bf-vum" secondAttribute="bottom" constant="15" id="jMw-NK-2xP"/>
+                                            <constraint firstItem="jn3-RA-gdC" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" constant="15" id="jla-kp-9cf"/>
                                             <constraint firstItem="NkB-Bf-vum" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" id="qhG-pO-Obz"/>
-                                            <constraint firstItem="BM0-Ra-LZ0" firstAttribute="leading" secondItem="XG1-s6-lIA" secondAttribute="leading" constant="15" id="uCS-vh-TVm"/>
-                                            <constraint firstItem="BM0-Ra-LZ0" firstAttribute="top" secondItem="NkB-Bf-vum" secondAttribute="bottom" constant="15" id="yeT-di-xQc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -158,6 +160,7 @@
                     </view>
                     <connections>
                         <outlet property="detailLabel" destination="4AP-ZB-QH3" id="TLi-yR-JR1"/>
+                        <outlet property="height" destination="77s-ki-cLf" id="Rks-l2-ckV"/>
                         <outlet property="imageView" destination="NkB-Bf-vum" id="yrE-Dw-8x0"/>
                         <outlet property="titleLabel" destination="BM0-Ra-LZ0" id="oo5-hP-OOB"/>
                     </connections>
@@ -169,6 +172,5 @@
     </scenes>
     <resources>
         <image name="cancel.png" width="36" height="36"/>
-        <image name="temp.jpg" width="800" height="534"/>
     </resources>
 </document>

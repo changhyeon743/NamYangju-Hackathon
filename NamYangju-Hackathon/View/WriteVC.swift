@@ -22,6 +22,7 @@ class WriteVC: UIViewController {
     }
 
     @IBAction func okButtonPressed(_ sender: UIButton) {
+        self.view.endEditing(true)
         API.upload_post(title: nameField.text ?? "무제", content: textView.text, completion: { (bool) in
             Alertift.alert(title: "성공", message: "게시물을 올렸습니다. 확인해보세요. ><")
                 .action(.default("확인"))

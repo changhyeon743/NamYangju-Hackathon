@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import AlamofireImage
 import Motion
 
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
@@ -91,7 +91,12 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
         if let image:String = items[indexPath.row].pictureurl {
             //TODO: 이미지가 없는 조건 알기
             print(image)
-            cell.imageView. .sd_setImage(with: URL(string: image), completed: nil)
+            if !image.isEmpty {
+                cell.imageView.af_setImage(withURL: URL(string: image)!)
+                
+            } else {
+                cell.image = #imageLiteral(resourceName: "temp.jpg")
+            }
             
         }
         cell.like = items[indexPath.row].good
@@ -125,7 +130,9 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
         present(viewController, animated: true) {
             viewController.detail = items[indexPath.row].content
             viewController.titleText = items[indexPath.row].title
-            viewController.image = cell.image
+            viewController.image = cell.imageView.image!
+            viewController.view.layoutIfNeeded()
+            viewController.height.constant = 300
         }
         
         //cell.resize(to:CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width))

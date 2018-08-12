@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+import AlamofireImage
 class DetailVC: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var height: NSLayoutConstraint!
     
     var titleText:String = "" {
         didSet {
